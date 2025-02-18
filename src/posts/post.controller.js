@@ -107,14 +107,14 @@ export const deletePost = async(req, res) => {
 
     try {
 
+        const post = await Post.findByIdAndUpdate(id, {status: false},  { new: true });
+
         if (req.usuario.role === "USER_ROLE" && post.user.toString() !== req.usuario._id.toString()) {
             return res.status(403).json({ 
                 success: false, 
                 msg: "No autorizado para modificar esta publicación" 
             });
         }
-
-        await Post.findByIdAndUpdate(id, {status: false});
         
         res.status(200).json({
             success: true,
@@ -135,14 +135,14 @@ export const updatePost = async (req, res) => {
         const { id } = req.params;
         const { _id, keeper, ...data } = req.body; 
 
+        const post = await Post.findByIdAndUpdate(id, data, { new: true });
+
         if (req.usuario.role === "USER_ROLE" && post.user.toString() !== req.usuario._id.toString()) {
             return res.status(403).json({ 
                 success: false, 
                 msg: "No autorizado para modificar esta publicación" 
             });
         }
-
-        const post = await Post.findByIdAndUpdate(id, data, { new: true });
 
         if (!post) {
             return res.status(404).json({
