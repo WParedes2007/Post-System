@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "67b63e5e70b0fedcdac8e700"
+  },
+  "title": "Introducción a Node.js",
+  "category": "Programación",
+  "content": "Entorno de ejecución para JavaScript basado en el motor V8 de Chrome.",
+  "keeper": {
+    "$oid": "67b6371d5c9a7954c65ba882"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-19T20:26:06.645Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:36:31.630Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b641a670b0fedcdac8e70f"
+  },
+  "title": "Hola",
+  "category": "Social",
+  "content": "Hola chavales como estan",
+  "keeper": {
+    "$oid": "67b6371d5c9a7954c65ba882"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-19T20:40:06.159Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T21:18:58.553Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b64b83e9b3333dd2164803"
+  },
+  "title": "Hola",
+  "category": "Social",
+  "content": "Hola que tal chavalos de internet como estan",
+  "keeper": {
+    "$oid": "67b6498ae9b3333dd21647e0"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-19T21:22:11.397Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:34:31.106Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b65d1cad011c9d3edd0648"
+  },
+  "title": "Comida Favorita",
+  "category": "Social",
+  "content": "Diganme Su Comida Favorita",
+  "keeper": {
+    "$oid": "67b6498ae9b3333dd21647e0"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-19T22:37:16.471Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:38:11.677Z"
+  }
+}]

@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "67b6371d5c9a7954c65ba882"
+  },
+  "name": "Elkyn",
+  "surname": "Intecap",
+  "username": "esamayoa",
+  "email": "esamayoa@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$UrAKdJV8zWh1BzljgGMYog$JTfOsLjPqvVjHVgLjzLXjNgN3h3xThe0gBkcVlZCTqU",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b6498ae9b3333dd21647e0"
+  },
+  "name": "Pichiya",
+  "surname": "panadero",
+  "username": "lpichiya",
+  "email": "lpichiya@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$/awJCiPVGy2Tu58stibksw$DnGgZ5Z7mUICOUFC+zfMZ8cZex1MNcVWVb2RGwcr8vU",
+  "role": "USER_ROLE",
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b65f7fa30386fe783d00c6"
+  },
+  "name": "Anderson",
+  "surname": "Chino",
+  "username": "alopez",
+  "email": "alopez@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$DBxUrGf02YI47+cH71+0pQ$hhIvP76JJYQEf4c0WPVoKQ22Z+7A69WB9iU7HjnaPwE",
+  "role": "USER_ROLE",
+  "estado": true,
+  "__v": 0
+}]
