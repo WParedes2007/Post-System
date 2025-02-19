@@ -21,7 +21,7 @@ router.post(
 router.get("/", getPosts)
 
 router.get(
-    "/:id",
+    "/findPost/:id",
     [
         validarJWT,
         check("id", "No Es Un ID Valido").isMongoId(),
@@ -34,6 +34,7 @@ router.put(
     "/:id",
     [
         validarJWT,
+        check("id", "No Es Un ID Valido").isMongoId(),
         validarCampos
     ],
     updatePost

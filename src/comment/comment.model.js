@@ -5,10 +5,12 @@ const CommentSchema = new mongoose.Schema({
         type: String,
         required: [true, "El Contenido Es Obligatorio"]
     },
-    keeperUser: { type: mongoose.Schema.Types.ObjectId, 
+    keeperUser: { 
+        type: mongoose.Schema.Types.ObjectId, 
         ref: 'User', 
         required: true },
-    keeperPost: { type: mongoose.Schema.Types.ObjectId, 
+    keeperPost: { 
+        type: mongoose.Schema.Types.ObjectId, 
         ref: 'Post', 
         required: true },
     status: {

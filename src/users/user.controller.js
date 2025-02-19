@@ -94,7 +94,7 @@ export const updateUser = async (req, res = response) => {
 };
 
 
-export const unsubscribeStudent = async (req, res) => {
+export const unsubscribeUser = async (req, res) => {
     try {
         const userId = req.usuario._id;
         const user = await User.findByIdAndUpdate(userId, { estado: false }, { new: true });

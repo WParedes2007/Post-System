@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getUsers, getUserById, updateUser, deleteUser, assignCourseToStudent, unsubscribeStudent,getAssignedCourses} from "./user.controller.js";
+import { getUsers, getUserById, updateUser, deleteUser, unsubscribeUser} from "./user.controller.js";
 import { existeUsuarioById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarRol } from "../middlewares/validar-roles.js";
@@ -11,14 +11,6 @@ const router = Router();
 
 router.get("/", getUsers);
 
-router.get('/findCourse',
-    [
-        validarJWT
-    ] ,
-    getAssignedCourses
-);
-
-
 router.get(
     "/findUser/:id",
     [
@@ -28,14 +20,6 @@ router.get(
     ],
     getUserById
 )
-
-router.post(
-    "/assign-course", [
-        validarJWT,
-        validarRol("ADMIN_ROLE")
-    ],assignCourseToStudent
-
-    );
 
 router.put(
         "/:id",
@@ -54,7 +38,7 @@ router.delete(
             validarJWT,
             validarRol("USER_ROLE")
         ],
-        unsubscribeStudent
+        unsubscribeUser
 );
     
 

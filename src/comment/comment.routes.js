@@ -10,7 +10,6 @@ router.post(
     "/",
     [
         validarJWT,
-        check("email", "El Email es obligatorio").not().isEmpty(),
         check("postId", "El ID del post es obligatorio").isMongoId(),
         check("content", "El contenido es obligatorio").not().isEmpty(),
         validarCampos
@@ -21,7 +20,7 @@ router.post(
 router.get("/", getComments)
 
 router.get(
-    "/:id",
+    "/findComment/:id",
     [
         validarJWT,
         check("id", "No Es Un ID Valido").isMongoId(),

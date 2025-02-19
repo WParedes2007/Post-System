@@ -7,8 +7,9 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js'
 import authRoutes from '../src/auth/auth.routes.js'
-//import userRoutes from "../src/users/user.routes.js"
-//import courseRoutes from "../src/courses/course.routes.js"
+import userRoutes from "../src/users/user.routes.js"
+import postRoutes from "../src/posts/post.routes.js"
+import commentRoutes from "../src/comment/comment.routes.js"
 
 const configurarMiddlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
@@ -21,7 +22,10 @@ const configurarMiddlewares = (app) => {
 
 const configurarRutas = (app) =>{
         app.use("/postSystem/v1/auth", authRoutes);
-        //app.use("/academicSystem/v1/users", userRoutes);
+        app.use("/postSystem/v1/users", userRoutes);
+        app.use("/postSystem/v1/posts", postRoutes);
+        app.use("/postSystem/v1/comments", commentRoutes);
+
 }
 
 const conectarDB = async () => {

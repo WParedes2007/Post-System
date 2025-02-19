@@ -13,7 +13,8 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: [true, "El Contenido Es Obligatorio"]
     },
-    keeper: { type: mongoose.Schema.Types.ObjectId, 
+    keeper: { 
+        type: mongoose.Schema.Types.ObjectId, 
         ref: 'User', 
         required: true },
     status: {

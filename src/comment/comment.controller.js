@@ -5,7 +5,7 @@ import Comment from "../comment/comment.model.js";
 export const saveComment = async (req, res) => {
     try {
         const data = req.body;
-        const user = await User.findOne({ email: data.email });
+        const user = await User.findById(req.usuario._id); 
         const post = await Post.findById(data.postId);
 
         if (!user) {
@@ -113,19 +113,10 @@ export const searchComment = async (req, res) =>{
 }
 
 export const deleteComment = async(req, res) => {
-
     const {id} = req.params;
-
     try {
 
         const comment = await Comment.findByIdAndUpdate(id, { status: false });        
-
-        if (!comment) {
-            return res.status(404).json({
-                 success: false, 
-                 msg: "Comentario No Encontrado" 
-            });
-        }
 
         if (req.usuario.role === "USER_ROLE" && comment.keeperUser.toString() !== req.usuario._id.toString()) {
             return res.status(403).json({ 
@@ -134,6 +125,13 @@ export const deleteComment = async(req, res) => {
             });
         }
         
+        if (!comment) {
+            return res.status(404).json({
+                 success: false, 
+                 msg: "Comentario No Encontrado" 
+            });
+        }
+
         res.status(200).json({
             success: true,
             message: "Comentario Eliminado Exitosamente"
