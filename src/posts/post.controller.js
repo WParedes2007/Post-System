@@ -121,7 +121,6 @@ export const deletePost = async(req, res) => {
             });
         }
 
-        // Actualiza el estado de la publicación para marcarla como eliminada
         post.status = false;
         await post.save();
 
