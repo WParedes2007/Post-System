@@ -56,6 +56,13 @@ export const register  = async (req, res) => {
     try {
         const data = req.body;
 
+        if (data.role === "ADMIN_ROLE") {
+            return res.status(403).json({
+                success: false,
+                message: "No tienes permisos para registrarte como administrador"
+            });
+        }
+
         const encryptedPassword = await hash(data.password);
 
         const user = await Usuario.create({
@@ -65,7 +72,7 @@ export const register  = async (req, res) => {
             email: data.email,
             phone: data.phone,
             password: encryptedPassword,
-            role: data.role
+            role: data.role || "USER_ROLE"
         })
 
         return res.status(201).json({

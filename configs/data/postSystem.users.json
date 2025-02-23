@@ -1,12 +1,12 @@
 [{
   "_id": {
-    "$oid": "67b6371d5c9a7954c65ba882"
+    "$oid": "67bb5a90440fbfc27708aab7"
   },
-  "name": "Elkyn",
-  "surname": "Intecap",
-  "username": "esamayoa",
-  "email": "esamayoa@gmail.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$UrAKdJV8zWh1BzljgGMYog$JTfOsLjPqvVjHVgLjzLXjNgN3h3xThe0gBkcVlZCTqU",
+  "name": "Admin",
+  "surname": "Principal",
+  "username": "admin",
+  "email": "admin@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$HXHFBLMWXWTi4cFrGYyMBw$zJ7Pe87ZZV7ehkB68CG1yubGElPjJvxX9nbmmBMlOh8",
   "role": "ADMIN_ROLE",
   "estado": true,
   "__v": 0

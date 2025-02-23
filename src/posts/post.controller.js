@@ -1,10 +1,12 @@
 import User from "../users/user.model.js";
 import Post from "../posts/post.model.js";
+import Category from "../categories/category.model.js";
 
 export const savePost = async (req, res) => {
     try {
-        const data = req.body;
+        const { title, category, content } = req.body;
         const user = await User.findById(req.usuario._id); 
+
         if (!user) {
             return res.status(400).json({
                 success: false,
@@ -12,10 +14,18 @@ export const savePost = async (req, res) => {
             });
         }
 
+        const categoryExists = await Category.findById(category);
+        if (!categoryExists) {
+            return res.status(400).json({
+                success: false,
+                message: "Categoría no válida"
+            });
+        }
+
         const post = new Post({
-            title: data.title,
-            category: data.category,
-            content: data.content,
+            title,
+            category,
+            content,
             keeper: user._id,
             status: true
         });
@@ -24,82 +34,74 @@ export const savePost = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "Publicacion Creada",
+            message: "Publicación Creada",
             post
         });
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: "Error al guardar la Publicacion",
+            message: "Error al guardar la Publicación",
             error
         });
     }
-}
+};
 
 export const getPosts = async(req, res) => {
-    const {limite = 10, desde = 0} = req.query;
-    const query = {status: true};
+    const { limite = 10, desde = 0 } = req.query;
+    const query = { status: true };
+    
     try {
         const posts = await Post.find(query)
+            .populate("keeper", "nombre")
+            .populate("category", "name")
             .skip(Number(desde))
             .limit(Number(limite));
-            
-        const postsWithOwnerNames =  await Promise.all(posts.map(async (post) =>{
-            const owner = await User.findById(post.keeper);
-            return{
-                ...post.toObject(),
-                keeper: owner ? owner.nombre: "Creador No Encontrado"
-            }
-        }));
-        
+
         const total = await Post.countDocuments(query);
 
         res.status(200).json({
             success: true,
             total,
-            posts: postsWithOwnerNames
-        })
+            posts
+        });
 
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error Al Obtener La Publicacion",
+            message: "Error al obtener las publicaciones",
             error
-        })
+        });
     }
-}
+};
 
-export const searchPost = async (req, res) =>{
-    const {id} = req.params;
+export const searchPost = async (req, res) => {
+    const { id } = req.params;
 
     try {
-        const post = await Post.findById(id);
+        const post = await Post.findById(id)
+            .populate("keeper", "nombre")
+            .populate("category", "name");
 
-        if(!post){
+        if (!post) {
             return res.status(404).json({
                 success: false,
-                message: "Publicacion No Encontrada"
-            })
+                message: "Publicación No Encontrada"
+            });
         }
-
-        const owner = await User.findById(post.keeper);
 
         res.status(200).json({
             success: true,
-            post: {
-                ...post.toObject(),
-                keeper: owner ? owner.nombre : "Creador No Encontrado"
-            }
-        })
+            post
+        });
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error Al Buscar La Publicacion",
+            message: "Error al buscar la publicación",
             error
-        })
+        });
     }
-}
+};
 
 export const deletePost = async(req, res) => {
     const { id } = req.params;
@@ -132,16 +134,16 @@ export const deletePost = async(req, res) => {
         console.error(error);
         res.status(500).json({
             success: false,
-            message: "Error Al Eliminar La Publicación",
+            message: "Error al eliminar la publicación",
             error
         });
     }
-}
+};
 
 export const updatePost = async (req, res) => {
     try {
         const { id } = req.params;
-        const { _id, keeper, ...data } = req.body; 
+        const { category, ...data } = req.body;
 
         if (!req.usuario) {
             return res.status(401).json({
@@ -155,7 +157,7 @@ export const updatePost = async (req, res) => {
         if (!post) {
             return res.status(404).json({
                 success: false,
-                message: "Publicacion No Encontrada"
+                message: "Publicación No Encontrada"
             });
         }
 
@@ -165,23 +167,33 @@ export const updatePost = async (req, res) => {
                 msg: "No autorizado para modificar esta publicación" 
             });
         }
-              
+
+        if (category) {
+            const categoryExists = await Category.findById(category);
+            if (!categoryExists) {
+                return res.status(400).json({
+                    success: false,
+                    message: "Categoría no válida"
+                });
+            }
+            post.category = category;
+        }
 
         Object.assign(post, data);
         await post.save();
 
         res.status(200).json({
             success: true,
-            msg: "Publicacion Actualizada!",
+            msg: "Publicación Actualizada!",
             post
         });
-        
+
     } catch (error) {
         console.error(error);
         res.status(500).json({
             success: false,
-            msg: "Error Al Actualizar La Publicacion",
+            msg: "Error al actualizar la publicación",
             error
         });
     }
-}
+};

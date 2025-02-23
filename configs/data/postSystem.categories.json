@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "67bb5a90440fbfc27708aab2"
+  },
+  "name": "General",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-23T17:27:44.567Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-23T17:27:44.567Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bb5c3d8fac79d3541efe11"
+  },
+  "name": "Tecnologia",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-23T17:34:53.597Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-23T17:34:53.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bb5c448fac79d3541efe14"
+  },
+  "name": "Sociales",
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-23T17:35:00.291Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-23T17:59:07.879Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bb630f4ed370ec07e4b6bf"
+  },
+  "name": "Deportes",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-23T18:03:59.021Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-23T18:04:36.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bb63424ed370ec07e4b6c4"
+  },
+  "name": "Social",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-23T18:04:50.991Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-23T18:04:50.991Z"
+  }
+}]

@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \r\n \r\n  \"email\": \"lpichiya@gmail.com\",\r\n  \r\n  \"password\": \"123456789\"\r\n \r\n}",
+					"raw": "{\r\n \r\n \r\n  \"email\": \"admin@gmail.com\",\r\n  \r\n  \"password\": \"Admin123\"\r\n \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -170,7 +170,7 @@
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NDk4YWU5YjMzMzNkZDIxNjQ3ZTAiLCJpYXQiOjE3Mzk5OTk2NDMsImV4cCI6MTc0MDAwMzI0M30.6Tjg8JUQTGUpT_iQmIV7yum6LdTUAKyr6K_5tSxpAw0",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NDk4YWU5YjMzMzNkZDIxNjQ3ZTAiLCJpYXQiOjE3NDAzMzI3NzAsImV4cCI6MTc0MDMzNjM3MH0.PFNt1EZqUz64tLHRHIteJGVQuWOxL_fm5iMfCXceNFE",
 						"type": "text"
 					},
 					{
@@ -182,7 +182,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Hola\",\r\n  \"category\": \"Social\",\r\n  \"content\": \"Hola chavales como estan\",\r\n  \"status\": true\r\n}\r\n",
+					"raw": "{\r\n    \"title\": \"Mi Primer Post\",\r\n    \"category\": \"67bb5c448fac79d3541efe15\",\r\n    \"content\": \"Hola Chicos Como Estan\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -235,13 +235,13 @@
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NDk4YWU5YjMzMzNkZDIxNjQ3ZTAiLCJpYXQiOjE3NDAwMDQzOTEsImV4cCI6MTc0MDAwNzk5MX0.rOgmwi2fP1z9zF-2aT2BQr0h6yqRIlZ59Tb1iVGvfBQ",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiNWE5MDQ0MGZiZmMyNzcwOGFhYjciLCJpYXQiOjE3NDAzMzM4MjIsImV4cCI6MTc0MDMzNzQyMn0.QRqntrh3Ujtxtv_8XG79IB9ujHZSLoxmlP38da0tr4c",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Hola\",\r\n  \"category\": \"Social\",\r\n  \"content\": \"Hola que tal chavalos de internet como estan\",\r\n  \"status\": true\r\n}",
+					"raw": "{\r\n  \"title\": \"Hola\",\r\n  \"category\": \"67bb63424ed370ec07e4b6c4\",\r\n  \"content\": \"Hola que tal chavalos de internet como estan\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -249,7 +249,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/postSystem/v1/posts/67b64b83e9b3333dd2164803",
+					"raw": "http://localhost:3000/postSystem/v1/posts/67bb5ef5edb5ffff1515b2fb",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -259,7 +259,7 @@
 						"postSystem",
 						"v1",
 						"posts",
-						"67b64b83e9b3333dd2164803"
+						"67bb5ef5edb5ffff1515b2fb"
 					]
 				}
 			},
@@ -329,13 +329,13 @@
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NDk4YWU5YjMzMzNkZDIxNjQ3ZTAiLCJpYXQiOjE3Mzk5OTk2NDMsImV4cCI6MTc0MDAwMzI0M30.6Tjg8JUQTGUpT_iQmIV7yum6LdTUAKyr6K_5tSxpAw0",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NDk4YWU5YjMzMzNkZDIxNjQ3ZTAiLCJpYXQiOjE3NDAzMzM3NTEsImV4cCI6MTc0MDMzNzM1MX0.1_0T7UPyKBd4p781dRizgD8WrVHmNAsptt7T9fUHEGs",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"content\": \"Haz Tutoriales De Como Usarlos\",\r\n  \"postId\": \"67b63e5e70b0fedcdac8e700\"\r\n}\r\n",
+					"raw": "{\r\n  \"content\": \"Hola Como Estas\",\r\n  \"postId\": \"67bb5ef5edb5ffff1515b2fb\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -477,6 +477,158 @@
 							"value": null,
 							"disabled": true
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CATEGORIES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiNWE5MDQ0MGZiZmMyNzcwOGFhYjciLCJpYXQiOjE3NDAzMzM4MjIsImV4cCI6MTc0MDMzNzQyMn0.QRqntrh3Ujtxtv_8XG79IB9ujHZSLoxmlP38da0tr4c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Social\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/postSystem/v1/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"postSystem",
+						"v1",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CATEGORIES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/postSystem/v1/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"postSystem",
+						"v1",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CATEGORIES",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiNWE5MDQ0MGZiZmMyNzcwOGFhYjciLCJpYXQiOjE3NDAzMzM4MjIsImV4cCI6MTc0MDMzNzQyMn0.QRqntrh3Ujtxtv_8XG79IB9ujHZSLoxmlP38da0tr4c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Deportes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/postSystem/v1/categories/67bb630f4ed370ec07e4b6bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"postSystem",
+						"v1",
+						"categories",
+						"67bb630f4ed370ec07e4b6bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CATEGORIES",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NDk4YWU5YjMzMzNkZDIxNjQ3ZTAiLCJpYXQiOjE3NDAzMzM1OTgsImV4cCI6MTc0MDMzNzE5OH0.XyuTYs6NLjs2O71Tqia0ify72drcv3lwPAYcxMeC_tg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/postSystem/v1/categories/67bb5c3d8fac79d3541efe11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"postSystem",
+						"v1",
+						"categories",
+						"67bb5c3d8fac79d3541efe11"
 					]
 				}
 			},
